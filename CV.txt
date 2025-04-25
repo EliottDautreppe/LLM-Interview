@@ -1,0 +1,103 @@
+Curriculum Vitae
+
+Jean PHILIPPE
+Adresse: 12 rue des Sciences, 75005 Paris
+Téléphone : +33 6 12 34 56 78
+Email : jean.philippe@example.com
+LinkedIn : linkedin.com/in/jeanphilippe
+GitHub : github.com/jeanphilippe
+
+🎯 Objectif
+Étudiant en 4ᵉ année à l’École Nationale d’Ingénieurs en Informatique (ENII), je souhaite mettre à profit mes compétences en machine learning et en développement logiciel au sein d’une entreprise innovante.
+
+🎓 Formation
+2022 – Présent
+École Nationale d’Ingénieurs en Informatique (ENII), Paris
+– Cycle ingénieur (Diplôme d’ingénieur, spécialité Machine Learning)
+– Moyenne cumulative : 15,8/20
+
+2020 – 2022
+Prépa intégrée MP*, Lycée Jules-Ferry, Paris
+– Mention Bien (15,2/20)
+
+🛠️ Compétences techniques
+Langages de programmation
+
+Python (NumPy, Pandas, scikit-learn, TensorFlow, PyTorch)
+
+C++, Java
+
+SQL
+
+Machine Learning & Data Science
+
+Apprentissage supervisé et non supervisé
+
+Deep learning (CNN, RNN, Transformers)
+
+Traitement du signal et de l’image
+
+Data preprocessing, feature engineering, validation croisée
+
+Outils & environnements
+
+Jupyter Notebook, VS Code
+
+Git, Docker, Kubernetes
+
+Linux, Windows
+
+💼 Expériences professionnelles
+Juillet – Août 2024
+Stagiaire Machine Learning – DataTech Solutions, Paris
+
+Conception et entraînement d’un modèle de classification d’images pour la détection de défauts industriels (CNN).
+
+Implémentation d’une pipeline de traitement des données et d’automatisation du workflow avec Docker.
+
+Résultats : amélioration de 12 % de la précision du modèle et réduction de 30 % des temps de préprocessing.
+
+Février – Mars 2024
+Assistant Recherche – Laboratoire IA & Santé, Université Paris-Est
+
+Étude d’algorithmes de segmentation d’images médicales (U-Net) pour l’analyse de scanners.
+
+Rédaction d’un rapport technique et présentation des résultats lors du séminaire interne.
+
+📚 Projets académiques
+Projet « SmartTraffic » (Janv. – Mai 2024)
+
+Développement d’un système de détection et de comptage de véhicules en temps réel (OpenCV + YOLOv5).
+
+Interface web d’affichage des statistiques de trafic, backend en Flask.
+
+Projet « DeepHealth » (Sept. 2023 – Déc. 2023)
+
+Application d’un réseau convolutionnel pour la détection précoce de lésions cutanées.
+
+Exploration de méthodes de data augmentation et fine-tuning de modèles pré-entraînés.
+
+🌍 Langues
+Français : langue maternelle
+
+Anglais : courant (TOEIC : 900)
+
+Espagnol : intermédiaire
+
+🏆 Distinctions & Certifications
+Google TensorFlow Developer Certificate (2024)
+
+1ᵉʳ prix au Hackathon ENII 2023 (projet « EcoHomeAI »)
+
+Bourse d’excellence de la Région Île-de-France (2022 – 2024)
+
+🤝 Centres d’intérêt
+Veille technologique : blogs ML, MOOCs, conférences en ligne
+
+Sport : badminton, course à pied
+
+Bénévolat : mentor pour l’association « CodeClub Paris »
+
+Références disponibles sur demande
+
+MP : Mathématiques–Physique.

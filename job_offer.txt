@@ -1,0 +1,53 @@
+Offre d’Emploi : Ingénieur Machine Learning Junior (H/F)
+
+Localisation : Paris (hybride, 3 jours au bureau / 2 jours télétravail)
+Type de contrat : CDI
+Rémunération : À partir de 40 000 € brut annuel, selon profil
+Département : Recherche & Développement – Intelligence Artificielle
+
+Contexte
+Rejoignez DataInnov, une scale-up dynamique spécialisée dans les solutions d’IA pour l’industrie 4.0. Notre mission : optimiser les processus industriels grâce à l’apprentissage automatique et au traitement d’images. Dans le cadre de notre croissance, nous recherchons un Ingénieur Machine Learning Junior pour intégrer notre équipe R&D.
+
+Missions
+Concevoir, développer et déployer des modèles de machine learning (classification, détection d’anomalies, segmentation) appliqués à l’analyse d’images et de données industrielles.
+
+Mettre en place des pipelines de traitement de données (préprocessing, feature engineering, validation croisée) en Python.
+
+Collaborer avec les équipes Software et DevOps pour containeriser et orchestrer les modèles (Docker, Kubernetes).
+
+Participer aux phases de tests, de validation et d’évaluation des performances des modèles en environnement de production.
+
+Rédiger la documentation technique et contribuer aux revues de code.
+
+Présenter les résultats et les avancées lors de points réguliers et de démonstrations clients.
+
+Profil recherché
+Diplôme : Étudiant en dernière année d’école d’ingénieur ou jeune diplômé en informatique, spécialité machine learning / data science.
+
+Solide maîtrise de Python et des frameworks ML (scikit-learn, TensorFlow ou PyTorch).
+
+Expérience académique ou stage significatif en machine learning, idéalement sur des projets de traitement d’images (CNN, U-Net, YOLO…).
+
+Connaissances en conteneurisation (Docker) et orchestration (Kubernetes) appréciées.
+
+Bonnes notions de SQL et de gestion de bases de données.
+
+Esprit d’analyse, rigueur scientifique et goût du travail en équipe.
+
+Anglais professionnel, tant à l’écrit qu’à l’oral.
+
+Avantages
+Tickets restaurant (Swile) & prise en charge 50 % du titre de transport
+
+Mutuelle haut de gamme
+
+Budget formation et accès à des conférences spécialisées
+
+Possibilité d’évolution rapide vers des postes de Lead ML Engineer ou Data Scientist
+
+Équipe bienveillante et forte culture de partage des connaissances
+
+Pour postuler :
+Envoyez votre CV et lettre de motivation à recrutement@datainnov.com avec la référence MLJ-0425.
+
+DataInnov s’engage en faveur de la diversité et de l’inclusion. Tous nos postes sont ouverts aux personnes en situation de handicap.

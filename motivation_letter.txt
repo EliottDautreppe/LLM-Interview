@@ -1,0 +1,30 @@
+Jean PHILIPPE
+12 rue des Sciences
+75005 Paris
+Email : jean.philippe@example.com
+Téléphone : +33 6 12 34 56 78
+
+DataInnov
+Service Recrutement
+Adresse de l'entreprise
+75000 Paris
+
+Paris, le 24 avril 2025
+
+Objet : Candidature pour le poste d’Ingénieur Machine Learning Junior (Référence MLJ-0425)
+
+Madame, Monsieur,
+
+Actuellement étudiant en dernière année à l’École Nationale d’Ingénieurs en Informatique (ENII) de Paris, avec une spécialisation en machine learning, je suis vivement intéressé par le poste d’Ingénieur Machine Learning Junior au sein de votre équipe R&D, comme indiqué dans l’offre publiée.
+
+Passionné par l’intelligence artificielle et son application dans le monde réel, j’ai eu l’opportunité de travailler sur plusieurs projets académiques où j’ai développé des compétences solides en traitement de données et en machine learning. Notamment, lors de mon stage chez DataTech Solutions, j’ai conçu et entraîné un modèle de classification d’images pour la détection de défauts industriels, ce qui m’a permis de mettre en pratique mes connaissances en deep learning (CNN) et de développer une approche rigoureuse du préprocessing des données.
+
+Mon parcours m’a également permis d’acquérir une expérience pratique dans l’utilisation des outils tels que Python, TensorFlow, PyTorch, ainsi que dans la conteneurisation et l’orchestration des modèles avec Docker et Kubernetes. De plus, mes projets académiques, comme la création d’un système de détection de véhicules en temps réel avec YOLOv5, m’ont permis de maîtriser des aspects pratiques du machine learning, tout en affinant mon sens du travail collaboratif et de la communication technique.
+
+Ce poste représente pour moi une opportunité unique de travailler sur des projets innovants dans un environnement stimulant. Je suis convaincu que mes compétences techniques, associées à ma capacité à apprendre rapidement et à travailler en équipe, seraient des atouts précieux pour contribuer au succès de DataInnov.
+
+Je serais ravi de pouvoir échanger plus en détail avec vous sur ma candidature et sur la façon dont je pourrais participer aux projets passionnants menés par votre équipe. Je vous remercie de l’attention portée à ma demande et reste à votre disposition pour un entretien à votre convenance.
+
+Veuillez agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+
+Jean PHILIPPE
