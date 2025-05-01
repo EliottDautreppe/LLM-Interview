@@ -1,24 +1,22 @@
-import io
-import time
 from dataclasses import dataclass
 
-import numpy as np
 import openai
 import sys
-import threading
 import os
 import PyPDF2
-import pyaudio
-import wave
 from gtts import gTTS
 
-import scipy.io.wavfile
-import scipy.io.wavfile
 import tempfile
+import dotenv
+
+dotenv.load_dotenv()
 
 # --- 1. Configuration client Groq/OpenAI ---
-api_key_groq = '...'
-llm_model = "compound-beta-mini" # mistral-saba-24b   llama-3.3-70b-versatile
+api_key_groq = os.getenv('GROQ_API_KEY')
+#llm_model = "compound-beta-mini"
+#llm_model = "mistral-saba-24b"
+#llm_model = "llama-3.3-70b-versatile"
+llm_model = "llama-3.1-8b-instant"
 tss_model = "playai-tts"
 tts_voice = "Mikail-PlayAI"
 
@@ -123,55 +121,16 @@ def getMotivationLetter():
         return content
 
 def tts(text):
-    tts = gTTS(text, lang='fr')
-
-    temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".wav")
-    tts.save(temp_file.name)
-
-    # Jouer l'audio avec ffplay (ou vlc)
-    os.system(f"ffplay -autoexit -nodisp -loglevel quiet {temp_file.name}")  # Ou "vlc --play-and-exit test.mp3"
-
-    return
     if audio_activated:
-        response = client.audio.speech.with_streaming_response.create(
-            model=tss_model,
-            voice=tts_voice,
-            input=text,
-            response_format="wav"
-        )
-        #response.write_to_file("out.wav")
+        text = text.replace("CV", "c'est vais").replace("*", "")
+        tts = gTTS(text, lang='fr')
 
-        # define stream chunk
-        chunk = 1024
+        temp_file = tempfile.NamedTemporaryFile(delete=False, suffix=".wav")
+        tts.save(temp_file.name)
 
-        with response as file:
-            stream = io.BytesIO(file.read())
-            f = wave.Wave_read(stream)
-
-        # open a wav format music
-        f = wave.open(r"out.wav", "rb")
-        # instantiate PyAudio
-        p = pyaudio.PyAudio()
-        # open stream
-        stream = p.open(format=p.get_format_from_width(f.getsampwidth()),
-                        channels=f.getnchannels(),
-                        rate=f.getframerate(),
-                        output=True)
-        # read data
-        data = f.readframes(chunk)
-
-        # play stream
-        while data:
-            stream.write(data)
-            data = f.readframes(chunk)
-
-        # stop stream
-        stream.stop_stream()
-        stream.close()
-
-        # close PyAudio
-        p.terminate()
-
+        # Jouer l'audio avec ffplay (ou vlc)
+        os.system(f"ffplay -autoexit -nodisp -loglevel quiet -af \"atempo=1.5\" {temp_file.name}")
+        return
 
 # --- 3. Fonction interactive ---
 def interactive_interview(fetch_text=lambda: input("(debug) Vous: ")):
@@ -221,6 +180,9 @@ def interactive_interview(fetch_text=lambda: input("(debug) Vous: ")):
                 message_history.append({"role": "assistant", "content": "Merci, l'entretien est terminé."})
                 message_history.append({"role": "user", "content": "L'entretien est terminé, fais moi un retour sur la manière dont ça s'est passé et donne moi des conseils pour mieux performer la prochaine fois, éventuellement des modifications à apporter à mon CV ou ma lettre de motivation."})
                 recruteur_reply = ask_llm(message_history)
+
+                #recruteur_reply
+
                 tts(recruteur_reply)
                 message_history.append({"role": "assistant", "content": recruteur_reply})
             else:

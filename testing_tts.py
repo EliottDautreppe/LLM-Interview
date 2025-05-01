@@ -209,9 +209,7 @@ def start_interview():
     # Première question du recruteur
     st.markdown("### L'entretien commence")
     st.session_state.message_history.append({"role": "user", "content": "Bonjour"})
-    st.markdown(st.session_state.message_history)
     recruteur_reply = ask_llm(st.session_state.message_history)
-    st.markdown(recruteur_reply)
     st.session_state.message_history.append({"role": "assistant", "content": recruteur_reply})
 
     if st.session_state.audio_activated:

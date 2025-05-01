@@ -46,12 +46,14 @@ def upload_motivation():
     motivation_label_variable.set(path)
 
 def fetch_text():
+    global is_recording
     recording_button.configure(state=NORMAL)
+    blablating_turn.configure(text="SPEAK !!")
+    start_recording()
     while not is_recording:
         time.sleep(1)
     while is_recording:
         time.sleep(1)
-    recording_button.configure(state=DISABLED)
 
     if audio_activated:
         time.sleep(1)
@@ -77,39 +79,63 @@ def fetch_text():
     return result_text
 
 def go_to_interview():
-    global main, recording_button
+    global recording_button, blablating_turn
     for widget in main.winfo_children():
         widget.destroy()
-    recording_button = tk.Button(main, text="Start recording", command=start_recording, state=DISABLED)
+    recording_button = tk.Button(main, text="Stop recording", command=stop_recording, state=DISABLED)
     recording_button.pack()
+    blablating_turn = tk.Label(main, text="SPEAK !!")
+    blablating_turn.pack()
     def func():
         interactive_interview(fetch_text)
     threading.Thread(target=func).start()
 
 
 is_recording = False
-recording_button = None
+recording_button: tk.Button | None = None
+blablating_turn: tk.Label | None = None
 recording = []
 
 def start_recording():
     global is_recording
     is_recording = True
-    recording_button.configure(text="Stop recording", command=stop_recording)
 
     if audio_activated:
         # Start recording in a separate thread
         def record_thread():
+            global is_recording
+            recording.clear()
+            muted_for = 0
+            may_have_started_for = 0
+            started_recording = False
             while is_recording:
                 data = sd.rec(10000, 44100, channels=1, blocking=True)
                 recording.append(data)
+                if data.max() < .28:
+                    if started_recording:
+                        muted_for += 1
+                        if muted_for == 5:
+                            stop_recording()
+                    else:
+                        started_recording = False
+                else:
+                    if not started_recording:
+                        may_have_started_for += 1
+                        if may_have_started_for == 5:
+                            started_recording = True
+                    else:
+                        muted_for = 0
+
 
         threading.Thread(target=record_thread).start()
+
 
 def stop_recording():
     global is_recording
     is_recording = False
+    recording_button.configure(state=DISABLED)
     recording_button.configure(text="Start recording", command=start_recording)
-
+    blablating_turn.configure(text="Listen to michel or michelle or mychel or mychelle or michL (you got it)")
 
 
 tk.Button(main, text="Upload the job offer", command=upload_job_offer, width=40, height=5).pack()
@@ -122,5 +148,9 @@ tk.Button(main, text="Go to interview", command=go_to_interview, background="pin
 
 main.attributes("-fullscreen", True)
 main.configure(background="orange")
+
+dto.resume_filename = os.path.abspath('CV.pdf')
+dto.job_offer_filename = os.path.abspath('job_offer.pdf')
+dto.motivation_filename = os.path.abspath('motivation_letter.pdf')
 
 tk.mainloop()
