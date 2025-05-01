@@ -10,7 +10,7 @@ import numpy as np
 import scipy
 import sounddevice as sd
 
-from python import dto, interactive_interview, audio_activated, client
+from llm import dto, interactive_interview, audio_activated, client
 
 main = tk.Tk()
 
@@ -149,8 +149,8 @@ tk.Button(main, text="Go to interview", command=go_to_interview, background="pin
 main.attributes("-fullscreen", True)
 main.configure(background="orange")
 
-dto.resume_filename = os.path.abspath('CV.pdf')
-dto.job_offer_filename = os.path.abspath('job_offer.pdf')
-dto.motivation_filename = os.path.abspath('motivation_letter.pdf')
+dto.resume_filename = os.path.abspath('../dummies/CV.pdf')
+dto.job_offer_filename = os.path.abspath('../dummies/job_offer.pdf')
+dto.motivation_filename = os.path.abspath('../dummies/motivation_letter.pdf')
 
 tk.mainloop()

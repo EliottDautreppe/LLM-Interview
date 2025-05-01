@@ -194,7 +194,7 @@ def interactive_interview(fetch_text=lambda: input("(debug) Vous: ")):
             break
 
 if __name__ == "__main__":
-    dto.resume_filename = os.path.abspath('CV.pdf')
-    dto.job_offer_filename = os.path.abspath('job_offer.pdf')
-    dto.motivation_filename = os.path.abspath('motivation_letter.pdf')
+    dto.resume_filename = os.path.abspath('../dummies/CV.pdf')
+    dto.job_offer_filename = os.path.abspath('../dummies/job_offer.pdf')
+    dto.motivation_filename = os.path.abspath('../dummies/motivation_letter.pdf')
     interactive_interview()
