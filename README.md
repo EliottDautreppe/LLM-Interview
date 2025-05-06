@@ -13,9 +13,9 @@ You also need to copy-paste the `.env.dist` file to `.env`, and add your persona
 
 ## Launch
 
-To launch the Tkinter version: launch script `interface.py` in folder `tkinter`
+To launch the Tkinter version: launch script `interface.py` in folder `tkinter`. To exit the program, control-c in the console.
 
-To launch the Streamlit version: `streamlit run testing_tts.py` in directory `streamlit`
+To launch the Streamlit version: `streamlit run app.py` in directory `streamlit`. To stop the server, control-c in the console.
 
 ## Dummy files
 
